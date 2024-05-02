@@ -5,3 +5,5 @@ torch
 Flask-RESTful-Swagger
 pickle
 pandas
+python-dotenv
+flask_pymongo
