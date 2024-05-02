@@ -3,5 +3,4 @@ paddleocr
 transformers
 torch
 Flask-RESTful-Swagger
-pickle
 pandas
