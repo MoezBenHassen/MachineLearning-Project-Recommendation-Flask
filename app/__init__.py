@@ -70,14 +70,8 @@ def suggestions():
     teachers = list(db.users.find({"role": "teacher"}))
     students = list(db.users.find({"role": "student"}))
     courses = list(db.courses.find())
+    existing_schedules = list(db.scheduleslots.find())
     suggestions = []
-    teacher_busy_times = {}
-    student_course_types = {}
-
-    for student in students:
-        student_course_types[student['email']] = {}
-    for teacher in teachers:
-        teacher_busy_times[teacher['email']] = []
     for course in courses:
         interested_students = [s for s in students if course['_id'] in s.get('studentManagement', {}).get('courses', [])]
         available_teachers = [t for t in teachers if course['_id'] in t.get('teacherManagement', {}).get('coursesPreferences', [])]
@@ -99,27 +93,35 @@ def suggestions():
 
                     if possible_students:
                         start_time, end_time = format_times(t_slot['day'], t_int['start'], t_int['end'])
+                        student_names = [s['firstName'] + ' ' + s['lastName'] for s in interested_students]
+                        student_names_display = ', '.join(student_names)
                         suggestion = {
-                            'display': f"{course['name']} with {teacher['firstName']} {teacher['lastName']} on {t_slot['day']} at {t_int['start']} to {t_int['end']}",
-                            'body': {
-                                'scheduleSlot': {
-                                    "start": start_time,
-                                    "end": end_time,
-                                    "Type": course['type'],
-                                    "Course": str(course['_id']),
-                                    "description": "",
-                                    "allDay": True,
-                                    "url": "",
-                                    "teacher": str(teacher['_id']),
-                                    "students": possible_students,
-                                },
-                                "message": "Schedule slot created successfully"
+                                 'display': {
+                                        'course_name': course['name'],
+                                        'course_type': course['type'],
+                                        'teacher_name': teacher['firstName'] + ' ' + teacher['lastName'],
+                                        'day': t_slot['day'],
+                                        'time_start': t_int['start'],
+                                        'time_end': t_int['end'],
+                                        'student_names': student_names_display
+                                    },
+                                'body': {
+                                    'scheduleSlot': {
+                                        "start": start_time,
+                                        "end": end_time,
+                                        "Type": course['type'],
+                                        "Course": str(course['_id']),
+                                        "description": "",
+                                        "allDay": False,
+                                        "url": "",
+                                        "teacher": str(teacher['_id']),
+                                        "students": possible_students,
+                                    },
+                                    "message": "Schedule slot created successfully"
+                                }
                             }
-                        }
                         suggestions.append(suggestion)
     return jsonify(jsonify_data(suggestions))
-
-
 
 ######## swagger addons 
 SWAGGER_URL="/swagger"
