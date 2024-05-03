@@ -8,12 +8,10 @@ from PIL import Image
 import numpy as np
 import time
 import pickle
-from dotenv import load_dotenv
 from flask_pymongo import MongoClient
 import os
 from pymongo import MongoClient
 from .scheduleRecommendations import jsonify_data, time_overlap ,format_times
-load_dotenv() 
 t0 = time.time()
 app = Flask(__name__)
 CORS(app)
@@ -62,7 +60,8 @@ def convert_image_to_json():
 
 ########## Configure MongoDB #########
 # client = MongoClient(os.getenv('MONGODB_URL'))
-client = MongoClient("mongodb+srv://enigma:enigma@enigma-elkindy.r1oa8tj.mongodb.net/elkindy")
+mongo_url = "mongodb+srv://enigma:enigma@enigma-elkindy.r1oa8tj.mongodb.net/elkindy"
+client = MongoClient(mongo_url)
 db = client['elkindy']
 
 

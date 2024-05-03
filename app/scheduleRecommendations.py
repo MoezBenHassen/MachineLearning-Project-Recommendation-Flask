@@ -4,7 +4,8 @@ import os
 from pymongo import MongoClient
 from datetime import datetime, timedelta
 # client = MongoClient(os.getenv('MONGODB_URL'))
-client = MongoClient("mongodb+srv://enigma:enigma@enigma-elkindy.r1oa8tj.mongodb.net/elkindy")
+mongo_url = "mongodb+srv://enigma:enigma@enigma-elkindy.r1oa8tj.mongodb.net/elkindy"
+client = MongoClient(mongo_url)
 db = client['elkindy']
 existing_schedules = list(db.scheduleslots.find())
 
@@ -38,10 +39,5 @@ def jsonify_data(data):
         return str(data)
     return data
 
-def time_overlap(interval1, interval2):
-    """ Check if two time intervals overlap. """
-    start1 = datetime.strptime(interval1['start'], '%H:%M')
-    end1 = datetime.strptime(interval1['end'], '%H:%M')
-    start2 = datetime.strptime(interval2['start'], '%H:%M')
-    end2 = datetime.strptime(interval2['end'], '%H:%M')
+def time_overlap(start1, end1, start2, end2):
     return max(start1, start2) < min(end1, end2)
