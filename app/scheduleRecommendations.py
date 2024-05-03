@@ -3,7 +3,8 @@ from flask_pymongo import MongoClient
 import os
 from pymongo import MongoClient
 from datetime import datetime, timedelta
-client = MongoClient(os.getenv('MONGODB_URL'))
+# client = MongoClient(os.getenv('MONGODB_URL'))
+client = MongoClient("mongodb+srv://enigma:enigma@enigma-elkindy.r1oa8tj.mongodb.net/elkindy")
 db = client['elkindy']
 existing_schedules = list(db.scheduleslots.find())
 

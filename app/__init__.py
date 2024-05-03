@@ -61,7 +61,8 @@ def convert_image_to_json():
 
 
 ########## Configure MongoDB #########
-client = MongoClient(os.getenv('MONGODB_URL'))
+# client = MongoClient(os.getenv('MONGODB_URL'))
+client = MongoClient("mongodb+srv://enigma:enigma@enigma-elkindy.r1oa8tj.mongodb.net/elkindy")
 db = client['elkindy']
 
 
