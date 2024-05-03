@@ -67,60 +67,69 @@ db = client['elkindy']
 
 @app.route('/')
 def suggestions():
+    # Default intervals if no specific time slots are given
+    DEFAULT_INTERVALS = [
+    {"start": "09:00", "end": "10:30"},
+    {"start": "11:00", "end": "12:30"},
+    {"start": "14:00", "end": "15:30"},
+    {"start": "16:00", "end": "17:30"}
+]
     teachers = list(db.users.find({"role": "teacher"}))
     students = list(db.users.find({"role": "student"}))
     courses = list(db.courses.find())
-    existing_schedules = list(db.scheduleslots.find())
     suggestions = []
+
+    default_interval = {'start': '09:00', 'end': '17:00'}  # Default working hours if intervals are empty
     for course in courses:
         interested_students = [s for s in students if course['_id'] in s.get('studentManagement', {}).get('courses', [])]
         available_teachers = [t for t in teachers if course['_id'] in t.get('teacherManagement', {}).get('coursesPreferences', [])]
 
         for teacher in available_teachers:
-            teacher_slots = teacher['teacherManagement']['availableTimeSlots']
+            teacher_slots = teacher['teacherManagement']['availableTimeSlots'] or [{'day': i, 'intervals': DEFAULT_INTERVALS} for i in range(7)]
+
             for t_slot in teacher_slots:
-                t_intervals = t_slot['intervals']
+                t_intervals = t_slot['intervals'] if t_slot['intervals'] else DEFAULT_INTERVALS
                 for t_int in t_intervals:
                     possible_students = []
                     for student in interested_students:
-                        student_slots = student['studentManagement']['availableTimeSlots']
+                        student_slots = student['studentManagement']['availableTimeSlots'] or [{'day': t_slot['day'], 'intervals': DEFAULT_INTERVALS}]
+
                         for s_slot in student_slots:
                             if t_slot['day'] == s_slot['day']:
-                                s_intervals = s_slot['intervals']
+                                s_intervals = s_slot['intervals'] if s_slot['intervals'] else DEFAULT_INTERVALS
                                 for s_int in s_intervals:
-                                    if time_overlap(t_int, s_int):
+                                    start1, end1 = format_times(t_slot['day'], t_int['start'], t_int['end'])
+                                    start2, end2 = format_times(s_slot['day'], s_int['start'], s_int['end'])
+                                    if time_overlap(start1, end1, start2, end2):
                                         possible_students.append(student['_id'])
+                    student_names = [s['firstName'] + ' ' + s['lastName'] for s in interested_students]
+                    student_names_display = ', '.join(student_names)
 
                     if possible_students:
                         start_time, end_time = format_times(t_slot['day'], t_int['start'], t_int['end'])
-                        student_names = [s['firstName'] + ' ' + s['lastName'] for s in interested_students]
-                        student_names_display = ', '.join(student_names)
                         suggestion = {
-                                 'display': {
-                                        'course_name': course['name'],
-                                        'course_type': course['type'],
-                                        'teacher_name': teacher['firstName'] + ' ' + teacher['lastName'],
-                                        'day': t_slot['day'],
-                                        'time_start': t_int['start'],
-                                        'time_end': t_int['end'],
-                                        'student_names': student_names_display
-                                    },
-                                'body': {
-                                    'scheduleSlot': {
-                                        "start": start_time,
-                                        "end": end_time,
-                                        "Type": course['type'],
-                                        "Course": str(course['_id']),
-                                        "description": "",
-                                        "allDay": False,
-                                        "url": "",
-                                        "teacher": str(teacher['_id']),
-                                        "students": possible_students,
-                                    },
-                                    "message": "Schedule slot created successfully"
-                                }
+                            'display': {
+                                    'course_name': course['name'],
+                                    'teacher_name': teacher['firstName'] + ' ' + teacher['lastName'],
+                                    'day': t_slot['day'],
+                                    'time_start': t_int['start'],
+                                    'time_end': t_int['end'],
+                                    'student_names': student_names_display
+                                },                            
+                            'scheduleSlot': {
+                                "start": start_time,
+                                "end": end_time,
+                                "Type": course['type'],
+                                "Course": str(course['_id']),
+                                "description": "",
+                                "allDay": False,
+                                "url": "",
+                                "teacher": str(teacher['_id']),
+                                "students": possible_students,
                             }
+                        }
                         suggestions.append(suggestion)
+
     return jsonify(jsonify_data(suggestions))
 
 ######## swagger addons 
