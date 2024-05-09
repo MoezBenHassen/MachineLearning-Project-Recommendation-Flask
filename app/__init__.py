@@ -69,80 +69,58 @@ db = client['elkindy']
 def suggestions():
     # Default intervals if no specific time slots are given
     DEFAULT_INTERVALS = [
-        {"start": "09:00", "end": "10:30"},
-        {"start": "11:00", "end": "12:30"},
-        {"start": "14:00", "end": "15:30"},
-        {"start": "16:00", "end": "17:30"}
-    ]
+    {"start": "09:00", "end": "10:30"},
+    {"start": "11:00", "end": "12:30"},
+    {"start": "14:00", "end": "15:30"},
+    {"start": "16:00", "end": "17:30"}
+]
     teachers = list(db.users.find({"role": "teacher"}))
     students = list(db.users.find({"role": "student"}))
     courses = list(db.courses.find())
     suggestions = []
 
-    def student_matches_level(student, teaching_levels):
-        """Check if a student's level matches any of the levels the teacher can teach."""
-        student_level = student.get('studentManagement', {}).get('level')
-        return student_level in teaching_levels
-
+    default_interval = {'start': '09:00', 'end': '17:00'}  # Default working hours if intervals are empty
     for course in courses:
         interested_students = [s for s in students if course['_id'] in s.get('studentManagement', {}).get('courses', [])]
+        available_teachers = [t for t in teachers if course['_id'] in t.get('teacherManagement', {}).get('coursesPreferences', [])]
 
-        for teacher in teachers:
-            # Ensure the teacher can teach the course and student matches the teaching level
-            if str(course['_id']) not in [str(c) for c in teacher.get('teacherManagement', {}).get('coursesPreferences', [])]:
-                continue
-
-            teaching_levels = teacher['teacherManagement'].get('levels', [])
-            available_students = [
-                s for s in interested_students if student_matches_level(s, teaching_levels)
-            ]
-
+        for teacher in available_teachers:
             teacher_slots = teacher['teacherManagement']['availableTimeSlots'] or [{'day': i, 'intervals': DEFAULT_INTERVALS} for i in range(7)]
 
             for t_slot in teacher_slots:
                 t_intervals = t_slot['intervals'] if t_slot['intervals'] else DEFAULT_INTERVALS
-
                 for t_int in t_intervals:
                     possible_students = []
-                    for student in available_students:
+                    for student in interested_students:
                         student_slots = student['studentManagement']['availableTimeSlots'] or [{'day': t_slot['day'], 'intervals': DEFAULT_INTERVALS}]
 
                         for s_slot in student_slots:
                             if t_slot['day'] == s_slot['day']:
                                 s_intervals = s_slot['intervals'] if s_slot['intervals'] else DEFAULT_INTERVALS
-
                                 for s_int in s_intervals:
                                     start1, end1 = format_times(t_slot['day'], t_int['start'], t_int['end'])
                                     start2, end2 = format_times(s_slot['day'], s_int['start'], s_int['end'])
-
                                     if time_overlap(start1, end1, start2, end2):
                                         possible_students.append(student['_id'])
-
+                 
                     # Limit to one student only if the course type is "Instrument"
                     if course['type'] == "Instrument" and possible_students:
                         possible_students = [possible_students[0]]
-
-                    if possible_students:
-                        first_student = next(s for s in available_students if s['_id'] == possible_students[0])
-                        level = first_student.get('studentManagement', {}).get('level')
-
                     # Create a list of student names that match the possible_students IDs
                     student_names_display = ', '.join(
-                        [s['firstName'] + ' ' + s['lastName'] for s in available_students if s['_id'] in possible_students]
+                        [s['firstName'] + ' ' + s['lastName'] for s in interested_students if s['_id'] in possible_students]
                     )
                     if possible_students:
                         start_time, end_time = format_times(t_slot['day'], t_int['start'], t_int['end'])
                         suggestion = {
                             'display': {
-                                'course_name': course['name'],
-                                'teacher_name': teacher['firstName'] + ' ' + teacher['lastName'],
-                                'day': t_slot['day'],
-                                'time_start': t_int['start'],
-                                'time_end': t_int['end'],
-                                'student_names': student_names_display,
-                                'level': level
-
-                            },
+                                    'course_name': course['name'],
+                                    'teacher_name': teacher['firstName'] + ' ' + teacher['lastName'],
+                                    'day': t_slot['day'],
+                                    'time_start': t_int['start'],
+                                    'time_end': t_int['end'],
+                                    'student_names': student_names_display
+                                },                            
                             'scheduleSlot': {
                                 "start": start_time,
                                 "end": end_time,
@@ -152,11 +130,14 @@ def suggestions():
                                 "allDay": False,
                                 "url": "",
                                 "teacher": str(teacher['_id']),
-                                "students": possible_students
+                                "students": possible_students,
                             }
                         }
                         suggestions.append(suggestion)
 
+    return jsonify(jsonify_data(suggestions))
+
+def suggestions():
     return jsonify(jsonify_data(suggestions))
 
 ######## swagger addons 
