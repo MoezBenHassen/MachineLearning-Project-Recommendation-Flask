@@ -1,148 +1,59 @@
-# app/__init__.py
 from flask import request, jsonify, Flask
-from .ocr import paddle_scan
-from .churnRate import preprocess_input
 from flask_cors import CORS
 from flask_swagger_ui import get_swaggerui_blueprint
-from PIL import Image
-import numpy as np
 import time
 import pickle
-from flask_pymongo import MongoClient
-import os
-from pymongo import MongoClient
-from .scheduleRecommendations import jsonify_data, time_overlap ,format_times
+import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 t0 = time.time()
 app = Flask(__name__)
 CORS(app)
 
-
-
+# Load pre-trained models
+recommendation_model = pickle.load(open("best_model_recommendation.sav", "rb"))
+vectorizer = pickle.load(open("vectorizerr.sav", "rb"))
+df_reference = pd.read_excel('Classeur2.xlsx')
 
 ####### Churn Rate #######
-model = pickle.load(open("modelChurnRF.sav", "rb"))
-@app.route('/predict', methods=['POST'])
-def predict():
+# model = pickle.load(open("modelChurnRF.sav", "rb"))
+
+# @app.route('/predict', methods=['POST'])
+# def predict():
+#     input_data = request.json
+#     preprocessed_input = preprocess_input(input_data)
+    
+#     prediction = model.predict(preprocessed_input)
+#     probability = model.predict_proba(preprocessed_input)[:, 1]
+    
+#     response = {
+#         "prediction": int(prediction[0]),
+#         "probability": float(probability[0])
+#     }
+    
+#     return jsonify(response)
+
+@app.route('/recommend', methods=['POST'])
+def recommend():
     input_data = request.json
-    print(input_data)
-    preprocessed_input = preprocess_input(input_data)
+    preprocessed_input = preprocess_recommendation_input(input_data)
     
-    prediction = model.predict(preprocessed_input)
-    probability = model.predict_proba(preprocessed_input)[:, 1]
+    # Predict similarity scores
+    similarity_scores = recommendation_model.predict(preprocessed_input)
     
-    response = {
-        "prediction": int(prediction[0]),
-        "probability": float(probability[0])
-    }
+    # Add similarity scores to the reference DataFrame
+    df_reference['Predicted_Similarity_Score'] = similarity_scores
+    
+    # Sort by similarity scores and get top recommendations
+    recommendations_sorted = df_reference.sort_values(by='Predicted_Similarity_Score', ascending=False).head()
+    
+    response = recommendations_sorted.to_dict(orient='records')
     
     return jsonify(response)
 
-
-####### Convertion Image #######
-
-
-@app.route('/convert', methods=['POST'])
-def convert_image_to_json():
-    if 'image' not in request.files:
-        return jsonify({'error': 'No image provided'}), 400
-
-    print(request)
-    image_file = request.files.get('image')
-    if image_file is None:
-        return jsonify({'error': 'No file provided'}), 400
-    image = Image.open(image_file)
-    image_array = np.array(image.convert('RGB'))   
-    receipt_texts = paddle_scan(image_array)
-    set_texts = list(set(receipt_texts))
-    print(50*"--","\ntext only:\n",set_texts)
-    return jsonify(set_texts)
-
-
-########## Configure MongoDB #########
-# client = MongoClient(os.getenv('MONGODB_URL'))
-mongo_url = "mongodb+srv://enigma:enigma@enigma-elkindy.r1oa8tj.mongodb.net/elkindy"
-client = MongoClient(mongo_url)
-db = client['elkindy']
-
-
-@app.route('/')
-def suggestions():
-    # Default intervals if no specific time slots are given
-    DEFAULT_INTERVALS = [
-    {"start": "09:00", "end": "10:30"},
-    {"start": "11:00", "end": "12:30"},
-    {"start": "14:00", "end": "15:30"},
-    {"start": "16:00", "end": "17:30"}
-]
-    teachers = list(db.users.find({"role": "teacher"}))
-    students = list(db.users.find({"role": "student"}))
-    courses = list(db.courses.find())
-    suggestions = []
-
-    default_interval = {'start': '09:00', 'end': '17:00'}  # Default working hours if intervals are empty
-    for course in courses:
-        interested_students = [s for s in students if course['_id'] in s.get('studentManagement', {}).get('courses', [])]
-        available_teachers = [t for t in teachers if course['_id'] in t.get('teacherManagement', {}).get('coursesPreferences', [])]
-
-        for teacher in available_teachers:
-            teacher_slots = teacher['teacherManagement']['availableTimeSlots'] or [{'day': i, 'intervals': DEFAULT_INTERVALS} for i in range(7)]
-
-            for t_slot in teacher_slots:
-                t_intervals = t_slot['intervals'] if t_slot['intervals'] else DEFAULT_INTERVALS
-                for t_int in t_intervals:
-                    possible_students = []
-                    for student in interested_students:
-                        student_slots = student['studentManagement']['availableTimeSlots'] or [{'day': t_slot['day'], 'intervals': DEFAULT_INTERVALS}]
-
-                        for s_slot in student_slots:
-                            if t_slot['day'] == s_slot['day']:
-                                s_intervals = s_slot['intervals'] if s_slot['intervals'] else DEFAULT_INTERVALS
-                                for s_int in s_intervals:
-                                    start1, end1 = format_times(t_slot['day'], t_int['start'], t_int['end'])
-                                    start2, end2 = format_times(s_slot['day'], s_int['start'], s_int['end'])
-                                    if time_overlap(start1, end1, start2, end2):
-                                        possible_students.append(student['_id'])
-                 
-                    # Limit to one student only if the course type is "Instrument"
-                    if course['type'] == "Instrument" and possible_students:
-                        possible_students = [possible_students[0]]
-                    # Create a list of student names that match the possible_students IDs
-                    student_names_display = ', '.join(
-                        [s['firstName'] + ' ' + s['lastName'] for s in interested_students if s['_id'] in possible_students]
-                    )
-                    if possible_students:
-                        start_time, end_time = format_times(t_slot['day'], t_int['start'], t_int['end'])
-                        suggestion = {
-                            'display': {
-                                    'course_name': course['name'],
-                                    'teacher_name': teacher['firstName'] + ' ' + teacher['lastName'],
-                                    'day': t_slot['day'],
-                                    'time_start': t_int['start'],
-                                    'time_end': t_int['end'],
-                                    'student_names': student_names_display
-                                },                            
-                            'scheduleSlot': {
-                                "start": start_time,
-                                "end": end_time,
-                                "Type": course['type'],
-                                "Course": str(course['_id']),
-                                "description": "",
-                                "allDay": False,
-                                "url": "",
-                                "teacher": str(teacher['_id']),
-                                "students": possible_students,
-                            }
-                        }
-                        suggestions.append(suggestion)
-
-    return jsonify(jsonify_data(suggestions))
-
-def suggestions():
-    return jsonify(jsonify_data(suggestions))
-
 ######## swagger addons 
-SWAGGER_URL="/swagger"
-API_URL="/static/swagger.json"
+SWAGGER_URL = "/swagger"
+API_URL = "/static/swagger.json"
 
 swagger_ui_blueprint = get_swaggerui_blueprint(
     SWAGGER_URL,
@@ -152,3 +63,9 @@ swagger_ui_blueprint = get_swaggerui_blueprint(
     }
 )
 app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
+
+def preprocess_recommendation_input(data):
+    input_df = pd.DataFrame(data, index=[0])
+    new_text = input_df['Functional_Requirements'] + ", " + input_df['Technologies_Used']
+    sparse_matrix_new = vectorizer.transform(new_text)
+    return sparse_matrix_new

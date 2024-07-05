@@ -1,8 +1,8 @@
 Flask
-paddleocr
-transformers
-torch
-Flask-RESTful-Swagger
+flask-cors
+flask-swagger-ui
 pandas
-python-dotenv
-flask_pymongo
+scikit-learn
+pymongo
+numpy
+openpyxl
