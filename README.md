@@ -1,5 +1,7 @@
 # Machine-Learning---Project-recommendation-
 
+run `pip install -r requirements.txt --user`
+
 ### Description
 Includes three different models: Support Vector Machine (SVM), Random Forest, and Gradient Boosting Regressor. It trains each model, performs hyperparameter tuning using grid search, and evaluates them using cross-validation. Here's a summary of how each model is included and evaluated:
 
