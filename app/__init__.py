@@ -33,24 +33,26 @@ df_reference = pd.read_excel('Classeur2_with_scores.xlsx')
     
 #     return jsonify(response)
 
+# @app.route('/recommend', methods=['POST'])
+# def recommend():
+#     input_data = request.json
+#     preprocessed_input = preprocess_recommendation_input(input_data)
+    
+#     # Predict similarity scores
+#     similarity_scores = recommendation_model.predict(preprocessed_input)
+    
+#     # Add similarity scores to the reference DataFrame
+#     df_reference['Predicted_Similarity_Score'] = similarity_scores
+    
+#     # Sort by similarity scores and get top recommendations
+#     recommendations_sorted = df_reference.sort_values(by='Predicted_Similarity_Score', ascending=False).head()
+    
+#     response = recommendations_sorted.to_dict(orient='records')
+    
+#     return jsonify(response)
+
 @app.route('/recommend', methods=['POST'])
 def recommend():
-    input_data = request.json
-    preprocessed_input = preprocess_recommendation_input(input_data)
-    
-    # Predict similarity scores
-    similarity_scores = recommendation_model.predict(preprocessed_input)
-    
-    # Add similarity scores to the reference DataFrame
-    df_reference['Predicted_Similarity_Score'] = similarity_scores
-    
-    # Sort by similarity scores and get top recommendations
-    recommendations_sorted = df_reference.sort_values(by='Predicted_Similarity_Score', ascending=False).head()
-    
-    response = recommendations_sorted.to_dict(orient='records')
-    
-    return jsonify(response)
-
     input_data = request.json
     preprocessed_input = preprocess_recommendation_input(input_data)
     
