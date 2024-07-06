@@ -15,6 +15,21 @@ python run.py
 ## Easily check available APIs using Swagger : 
 Navigate to [http://localhost:5000/swagger](http://localhost:5000/swagger) in your web browser to access the Swagger UI, assuming your Flask app is running on localhost and port 5000.
 
+## Test recommendation API after running project :
+using Postman : POST [http://localhost:5000/recommend](http://localhost:5000/recommend) 
+Body: raw JSON : 
+```json
+{
+    "Budget": 1500,
+    "Duration": 3,
+    "Team_Size": 4,
+    "Client_Feedback": "good",
+    "Success": 1,
+    "Functional_Requirements": "tribunal verification",
+    "Technologies_Used": "Angular, Springboot, mongo"
+}
+```
+result should be a json array with similar projects from Classeur.xslx
 ## Short explanation for the code to generate a project recommendation
 
 ```python
