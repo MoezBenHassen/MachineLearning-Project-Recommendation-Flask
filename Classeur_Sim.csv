@@ -1,0 +1,297 @@
+Project_ID ,Project_Name ,Budget,Duration,Team_Size ,Client_Feedback,Success ,Functional_Requirements,Technologies_Used,Similarity_Score
+1,Website Redesign,1000,5,5,Excellent       ,1,"Improve user interface, Add e-commerce functionality","HTML, CSS, JavaScript, PHP   ",0.2742231446202695
+2,Mobile App Launch,2000,2,6,good,0,"User authentication, In-app purchases"," React Native, Firebase      ",0.0
+3,Marketing Campaign,25000,10,10,Excellent       ,1,"Social media integration, Email marketing automation","MailChimp, Facebook Ads Manager  ",0.0
+4,Product Development,20000,24,12,Excellent       ,1,"Prototype development, Feature prioritization  "," Python, Django, PostgreSQL ",0.0
+5,Consulting Project,30000,6,4,good,1,"Needs analysis, Solution design ","Microsoft Excel, PowerPoint  ",0.0
+6,Data Analysis Project,15000,8,8,Excellent,1,"Data analysis, Data visualization","Python, Pandas, Matplotlib",0.0
+7,Web Development Project,18000,12,6,good,1,"Frontend development, Backend development","CSS, JavaScript, Node.js, MongoDB",0.14285993300177338
+8,Web Development Project,18000,12,6,Good,1,"Frontend development,Backend development","HTML, CSS, JavaScript, Node.js",0.2857901393604896
+9,E-commerce Platform Development,35000,20,10,Excellent,1,E-commerce features implementation,"PHP,MySQL,Laravel",0.0
+10,Mobile Game Development,25000,16,7,Good,1,Game design,"Unity,C#",0.0
+11,AI Chatbot Development,28000,14,5,Excellent,1,Natural language processing,"Python,TensorFlow",0.0
+12,Développement d'une plateforme de commerce électronique,28000,16,6,Excellent,1,"Développement de fonctionnalités e-commerce, Intégration de passerelles de paiement","React, Node.js, MongoDB",0.0
+13,Conception d'une application de gestion des tâches,20000,10,5,Bon,1,"Gestion des tâches, Synchronisation multi-appareils","React Native, Firebase",0.0
+14,Développement d'un système de recommandation de films,35000,18,8,Excellent,1,"Système de recommandation, Traitement de données massives","Python, TensorFlow, Scikit-learn",0.0
+15,Migration d'une base de données vers le cloud,30000,20,7,Bon,1,"Migration de bases de données, Sécurité des données","AWS, Azure, Google Cloud Platform",0.0
+16,Développement d'un système de suivi des ventes en ligne,40000,24,10,Excellent,1,"Suivi des ventes en ligne, Analyse des données de ventes","Python, Flask, MySQL",0.0
+17,Développement d'une application de gestion des stocks,25000,14,6,Bon,1,"Gestion des stocks, Suivi des inventaires","Java, Spring Boot, MySQL",0.0
+18,Création d'un système de réservation en ligne,32000,18,8,Excellent,1,"Système de réservation, Gestion des réservations","PHP, Laravel, PostgreSQL",0.0
+19,Conception d'une plateforme d'apprentissage en ligne,30000,16,7,Bon,1,"Plateforme d'apprentissage, Gestion des cours","Django, JavaScript, MySQL",0.0
+20,Développement d'un système de gestion des RH,28000,20,9,Excellent,1,"Gestion des ressources humaines, Suivi des congés","Python, Django, PostgreSQL",0.0
+21,Migration d'un système CRM vers le cloud,35000,22,10,Excellent,1,"Migration CRM, Intégration cloud","Salesforce, AWS, Azure",0.0
+22,Développement d'une application de suivi des tâches,18000,10,5,Bon,1,"Gestion des tâches, Suivi des projets","React, Node.js, MongoDB",0.0
+23,Création d'un site web de commerce électronique,30000,16,8,Excellent,1,"E-commerce, Gestion des commandes","HTML, CSS, JavaScript, PHP, MySQL",0.4312537918999333
+24,Développement d'une application mobile de fitness,25000,14,6,Bon,1,"Suivi de la condition physique, Planification des séances d'entraînement","React Native, Firebase",0.0
+25,Mise en place d'un système de gestion des stocks,28000,18,7,Bon,1,"Gestion des stocks, Inventaire en temps réel","Java, Spring Boot, Hibernate, PostgreSQL",0.0
+26,Création d'un outil de gestion des ressources,32000,20,9,Excellent,1,"Gestion des ressources, Allocation des ressources","Python, Django, Flask, SQLite",0.0
+27,Développement d'une application de gestion des événements,20000,15,6,Excellent,1,"Gestion des événements, Planification","React, Node.js, MongoDB",0.0
+28,Conception d'une plateforme d'apprentissage en ligne,35000,22,8,Excellent,1,"Cours en ligne, Suivi des progrès","HTML, CSS, JavaScript, PHP, MySQL",0.39980227671329616
+29,Développement d'un système de réservation de voyages,28000,18,7,Bon,1,"Réservation de vols, Hébergement","React Native, Firebase",0.0
+30,Création d'un système de gestion des employés,30000,20,9,Excellent,1,"Gestion des employés, Suivi du temps de travail","Java, Spring Boot, Hibernate, PostgreSQL",0.0
+31,Mise en place d'un système de gestion des documents,32000,16,6,Bon,1,"Gestion des documents, Archivage","Python, Django, Flask, SQLite",0.0
+32,Développement d'une application de suivi de fitness,25000,14,5,Bon,1,"Suivi des activités physiques, Entraînements personnalisés","Flutter, Firebase",0.0
+33,Création d'un système de gestion des stocks,30000,18,7,Excellent,1,"Gestion des stocks, Suivi des inventaires","Python, Django, PostgreSQL",0.0
+34,Développement d'un jeu mobile de quiz,20000,12,4,Bon,1,"Quiz interactif, Gestion des scores","Unity, C#",0.0
+35,Conception d'une application de gestion de tâches,22000,16,6,Bon,1,"Gestion des tâches, Rappels","React Native, Node.js, MongoDB",0.0
+36,Mise en place d'un système de réservation de salles,28000,20,8,Excellent,1,"Réservation de salles, Disponibilité en temps réel","PHP, Laravel, MySQL",0.0
+37,Création d'une application de suivi des dépenses,18000,10,4,Bon,1,"Suivi des dépenses, Catégorisation des transactions","React Native, Firebase",0.0
+38,Développement d'un site web de réservation de restaurants,26000,14,6,Bon,1,"Réservation de restaurants, Recherche de restaurants","HTML, CSS, JavaScript, Node.js, MongoDB",0.3075582337313072
+39,Conception d'une plateforme de streaming de musique,35000,20,8,Excellent,1,"Streaming de musique, Création de playlists","Python, Django, PostgreSQL",0.0
+40,Mise en place d'un système de gestion des ressources humaines,30000,16,7,Bon,1,"Gestion des employés, Suivi des congés","PHP, Laravel, MySQL",0.0
+41,Développement d'une application de gestion des rendez-vous médicaux,24000,12,5,Bon,1,"Gestion des rendez-vous, Notifications","React, Node.js, MongoDB",0.0
+42,Développement d'une application de suivi de fitness,20000,10,6,Bon,1,"Suivi de l'activité physique, Planification des entraînements","Flutter, Firebase",0.0
+43,Création d'un site web d'agence de voyage,28000,16,8,Excellent,1,"Réservation de voyages, Recommandation d'itinéraires","HTML, CSS, JavaScript, Node.js, MongoDB",0.3666611723919922
+44,Développement d'une plateforme de e-learning,32000,18,10,Excellent,1,"Cours en ligne, Quiz interactifs","Python, Django, PostgreSQL",0.0
+45,Mise en place d'un système de gestion de projet,26000,14,7,Bon,1,"Planification des tâches, Suivi des projets","PHP, Laravel, MySQL",0.0
+46,Développement d'une application de gestion des stocks,22000,12,5,Bon,1,"Suivi des stocks, Gestion des commandes","React, Node.js, MongoDB",0.0
+47,Développement d'une application de gestion des contacts,20000,10,6,Bon,1,"Gestion des contacts, Synchronisation cloud","React Native, Firebase",0.0
+48,Création d'un site web de réservation d'hôtels,35000,15,8,Excellent,1,"Réservation d'hôtels, Filtres avancés","HTML, CSS, JavaScript, Django, PostgreSQL",0.3479938896887613
+49,Développement d'une plateforme de streaming de musique,40000,18,10,Excellent,1,"Streaming de musique, Personnalisation de playlist","Node.js, React, MongoDB",0.0
+50,Mise en place d'une application de suivi de fitness,28000,12,7,Bon,1,"Suivi de l'activité physique, Suivi des objectifs","Vue.js, Flask, SQLite",0.0
+51,Développement d'un jeu mobile de course,30000,14,8,Excellent,1,"Conception de circuits, Mode compétition","Unity, C#",0.0
+52,Développement d'une application de gestion des tâches,25000,10,6,Bon,1,"Gestion des tâches, Suivi du temps","React, Node.js, MongoDB",0.0
+53,Création d'un site web de vente de produits artisanaux,30000,15,8,Excellent,1,"Vente en ligne, Gestion des stocks","HTML, CSS, JavaScript, Django, MySQL",0.4067390233010164
+54,Développement d'une application de messagerie instantanée,35000,18,10,Excellent,1,"Messagerie instantanée, Appels vidéo","React Native, Firebase",0.0
+55,Mise en place d'une application de suivi de santé,28000,12,7,Bon,1,"Suivi de la santé, Notifications","Vue.js, Flask, SQLite",0.0
+56,Développement d'un jeu mobile de stratégie,30000,14,8,Excellent,1,"Stratégie, Mode multijoueur","Unity, C#",0.0
+57,Refonte du site Web de l'entreprise,20000,8,5,Bon,1,"Amélioration de l'interface utilisateur, Optimisation du référencement","HTML, CSS, JavaScript, SEO",0.2739002270510723
+58,Développement d'une application de gestion de projets,28000,12,7,Excellent,1,"Suivi des tâches, Gestion des ressources","React, Node.js, MongoDB",0.0
+59,Création d'un site Web de portfolio pour un artiste,15000,6,4,Bon,1,"Présentation des œuvres d'art, Galerie en ligne","HTML, CSS, JavaScript",0.31844275956753754
+60,Développement d'une application mobile pour la gestion de la santé mentale,32000,16,9,Excellent,1,"Suivi de la santé mentale, Rappels","React Native, Firebase",0.0
+61,Mise en place d'un système de gestion des stocks pour une entreprise de commerce électronique,35000,18,10,Excellent,1,"Gestion des stocks, Suivi des ventes","Django, PostgreSQL, Angular",0.0
+62,Développement d'une application de suivi des dépenses personnelles,18000,10,6,Bon,1,"Suivi des dépenses, Gestion du budget","React Native, Firebase",0.0
+63,Refonte du système de gestion des employés,25000,14,8,Excellent,1,"Gestion des congés, Suivi des performances","Node.js, MongoDB",0.0
+64,Création d'une application Web de réservation de rendez-vous médicaux,30000,16,7,Excellent,1,"Réservation de rendez-vous, Gestion des patients","React, Django, PostgreSQL",0.0
+65,Développement d'un système de gestion des commandes pour une entreprise de restauration,28000,12,6,Bon,1,"Gestion des commandes, Suivi des stocks","Python, Flask, MySQL",0.0
+66,Mise en place d'un système de surveillance de la qualité de l'air pour une usine,35000,18,9,Excellent,1,"Surveillance de la qualité de l'air, Alertes en temps réel","Raspberry Pi, Sensors",0.0
+67,Développement d'une plateforme de gestion de projet collaboratif,28000,14,8,Bon,1,"Gestion de projet, Collaboration en ligne","Python, Django, PostgreSQL",0.0
+68,Refonte du site Web de commerce électronique,32000,16,6,Excellent,1,"Amélioration de l'expérience utilisateur, Intégration de nouvelles fonctionnalités","HTML, CSS, JavaScript, React, Node.js, MongoDB",0.28607116677113664
+69,Création d'une application de gestion des tâches personnelles,20000,10,5,Bon,1,"Gestion des tâches, Suivi des objectifs","React Native, Firebase",0.0
+70,Développement d'un système de gestion des ressources humaines,35000,18,10,Excellent,1,"Gestion des employés, Suivi des performances","Node.js, Express, MongoDB",0.0
+71,Mise en place d'un système de paiement en ligne sécurisé pour une boutique en ligne,30000,12,7,Bon,1,"Intégration de passerelle de paiement, Sécurité des transactions","PHP, Laravel, MySQL",0.0
+72,Développement d'une application de suivi des dépenses personnelles,22000,10,6,Bon,1,"Suivi des finances, Gestion des budgets","React Native, Firebase",0.0
+73,Refonte du site Web d'une entreprise de tourisme,28000,14,8,Excellent,1,"Amélioration de l'expérience utilisateur, Intégration de réservation en ligne","HTML, CSS, JavaScript, React, Node.js, MongoDB",0.3165154004482097
+74,Création d'une application de planification d'événements,20000,12,7,Bon,1,"Planification d'événements, Gestion des invités","Python, Django, PostgreSQL",0.0
+75,Développement d'une application de gestion de tâches collaboratives,35000,16,9,Excellent,1,"Gestion des tâches, Collaboration en ligne","Node.js, Express, MongoDB",0.0
+76,Mise en place d'un système de réservation en ligne pour un restaurant,30000,12,7,Bon,1,"Intégration de réservation en ligne, Gestion des tables","PHP, Laravel, MySQL",0.0
+77,Développement d'une application mobile de suivi des finances personnelles,25000,14,6,Bon,1,"Suivi des dépenses, Gestion des budgets","React Native, Firebase",0.0
+78,Conception d'un système de gestion des stocks pour une entreprise de vente au détail,30000,16,8,Excellent,1,"Suivi des stocks, Gestion des commandes","Python, Django, PostgreSQL",0.0
+79,Création d'un site Web de portfolio pour un artiste indépendant,15000,10,4,Bon,1,"Présentation des œuvres, Contact avec les clients","HTML, CSS, JavaScript",0.2786130077002824
+80,Développement d'un logiciel de réservation en ligne pour une société de tourisme,35000,18,10,Excellent,1,"Gestion des réservations, Intégration de paiement","PHP, Laravel, MySQL",0.0
+81,Mise en place d'un système de suivi des ventes et des performances pour une entreprise de commerce électronique,28000,12,7,Bon,1,"Analyse des données de vente, Suivi des performances","Node.js, Express, MongoDB",0.0
+82,Développement d'une application de gestion des tâches pour une équipe de développement,20000,10,5,Excellent,1,"Création de tâches, Attribution des responsabilités","Python, Flask, SQLite",0.0
+83,Création d'un système de réservation de places pour un théâtre local,18000,8,4,Bon,1,"Réservation de billets, Gestion des sièges","HTML, CSS, JavaScript, PHP, MySQL",0.3827261518250811
+84,Conception d'une plateforme d'apprentissage en ligne pour des cours de programmation,30000,16,8,Excellent,1,"Diffusion de cours, Suivi de la progression","React, Node.js, MongoDB",0.0
+85,Développement d'une application mobile de fitness pour le suivi des activités physiques,25000,12,6,Bon,1,"Enregistrement des séances d'entraînement, Suivi des performances","React Native, Firebase",0.0
+86,Mise en place d'un système de gestion des rendez-vous pour une clinique médicale,28000,14,7,Bon,1,"Planification des rendez-vous, Gestion des patients","Java, Spring Boot, PostgreSQL",0.0
+87,Développement d'une application de suivi des dépenses personnelles,15000,8,5,Bon,1,"Enregistrement des transactions, Catégorisation des dépenses","Python, Django, SQLite",0.0
+88,Création d'un site Web pour une agence de voyages,22000,10,6,Bon,1,"Affichage des destinations, Réservation de vols et d'hôtels","HTML, CSS, JavaScript, PHP, MySQL",0.31546678880148815
+89,Développement d'un jeu éducatif pour enfants,18000,12,4,Excellent,1,"Conception de niveaux, Apprentissage interactif","Unity, C#",0.0
+90,Mise en place d'un système de gestion des stocks pour un magasin en ligne,28000,14,8,Excellent,1,"Suivi des stocks, Gestion des commandes","Node.js, Express, MongoDB",0.0
+91,Conception d'une application de gestion de projets pour une équipe de développement,25000,16,7,Bon,1,"Planification des tâches, Suivi du temps","React, Redux, Firebase",0.0
+92,Création d'une application de gestion de tâches pour les équipes de projet,20000,10,5,Excellent,1,"Création de tâches, Attribution des responsabilités","Python, Flask, SQLite",0.0
+93,Développement d'un site Web de réservation de restaurants,18000,12,6,Bon,1,"Affichage des restaurants, Réservation de tables","HTML, CSS, JavaScript, Django, PostgreSQL",0.37374201805886476
+94,Conception d'une application de fitness personnalisée,25000,14,7,Excellent,1,"Planification des séances d'entraînement, Suivi des progrès","React Native, Firebase",0.0
+95,Création d'un système de gestion des congés pour une entreprise,22000,8,4,Bon,1,"Demande de congés, Approuver les demandes","Node.js, Express, MongoDB",0.0
+96,Développement d'un jeu de puzzle pour mobile,18000,10,5,Bon,1,"Conception de niveaux, Mécanique de jeu innovante","Unity, C#",0.0
+97,Développement d'une application de suivi des finances personnelles,15000,9,4,Bon,1,"Suivi des dépenses, Planification budgétaire","Java, Android Studio, SQLite",0.0
+98,Création d'un site Web de vente de produits artisanaux,21000,15,8,Excellent,1,"Affichage des produits, Processus de commande","HTML, CSS, JavaScript, PHP, MySQL",0.3246127126191696
+99,Développement d'un système de gestion de bibliothèque,18000,11,6,Bon,1,"Enregistrement des livres, Gestion des emprunts","Python, Django, PostgreSQL",0.0
+100,Conception d'une application de gestion de tâches pour les étudiants,17000,10,5,Bon,1,"Création de listes de tâches, Suivi des devoirs","React, Firebase",0.0
+101,Développement d'un jeu de course en 2D pour mobile,20000,13,7,Excellent,1,"Conception de niveaux, Personnalisation des véhicules","Unity, C#",0.0
+102,Développement d'une plateforme de réservation de cours en ligne,25000,14,9,Excellent,1,"Gestion des professeurs et des étudiants, Paiement en ligne sécurisé","HTML, CSS, JavaScript, PHP, MySQL",0.29178316805061616
+103,Création d'une application de gestion des tâches professionnelles,18000,12,6,Bon,1,"Suivi des projets, Gestion des deadlines","React Native, Firebase",0.0
+104,Développement d'un site Web d'agence immobilière,22000,16,7,Bon,1,"Listings immobiliers, Recherche avancée","HTML, CSS, JavaScript, PHP, MySQL",0.3214554127145702
+105,Conception d'une application de fitness et de suivi de santé,19000,13,5,Bon,1,"Enregistrement des séances d'entraînement, Suivi de l'alimentation","Flutter, Firebase",0.0
+106,Développement d'un jeu d'énigmes pour enfants sur tablette,21000,11,4,Excellent,1,"Conception d'énigmes interactives, Interface conviviale","Unity, C#",0.0
+107,Développement d'une application de suivi des dépenses personnelles,15000,10,5,Bon,1,"Gestion des transactions, Analyse des dépenses","Flutter, Firebase",0.0
+108,Création d'un site Web de recettes de cuisine,18000,12,6,Bon,1,"Publication de recettes, Recherche avancée","HTML, CSS, JavaScript, PHP, MySQL",0.33773816288620395
+109,Développement d'une application de messagerie instantanée,25000,14,8,Excellent,1,"Chat en temps réel, Partage de médias","React Native, Firebase",0.0
+110,Conception d'un système de gestion des stocks pour petites entreprises,22000,16,7,Excellent,1,"Suivi des inventaires, Gestion des fournisseurs","Python, Django, PostgreSQL",0.0
+111,Développement d'un jeu d'aventure narratif pour PC,30000,20,10,Excellent,1,"Scénario interactif, Graphismes haute résolution","Unity, C#",0.0
+112,Développement d'une application de suivi des performances sportives,20000,15,6,Bon,1,"Analyse des statistiques, Suivi des entraînements","Python, Flask, MongoDB",0.0
+113,Création d'un site Web de réservation de voyages,28000,18,8,Excellent,1,"Recherche de vols, Réservation d'hôtels","HTML, CSS, JavaScript, React, Node.js, MongoDB",0.3793745435495829
+114,Développement d'une application de gestion de projet agile,32000,22,10,Excellent,1,"Tableaux de bord, Suivi des tâches, Communication en équipe","React, Node.js, MongoDB",0.0
+115,Conception d'un système de gestion de bibliothèque en ligne,25000,16,7,Bon,1,"Gestion des livres, Gestion des emprunteurs","PHP, Laravel, MySQL",0.0
+116,Développement d'un jeu de plateforme pour mobile,35000,24,12,Excellent,1,"Niveaux interactifs, Contrôles intuitifs","Unity, C#",0.0
+117,Développement d'une application de suivi de la santé,18000,12,5,Bon,1,"Suivi des activités physiques, Gestion de la nutrition","Java, Android Studio, SQLite",0.0
+118,Création d'un système de gestion des ressources humaines,30000,20,8,Excellent,1,"Gestion des employés, Gestion des congés","Python, Django, PostgreSQL",0.0
+119,Développement d'une application de planification d'événements,25000,16,6,Bon,1,"Planification des événements, Gestion des invités","React Native, Firebase",0.0
+120,Conception d'un site Web d'e-commerce de produits bio,35000,24,10,Excellent,1,"Vente en ligne de produits biologiques, Paiement sécurisé","HTML, CSS, JavaScript, Node.js, MongoDB",0.3032410313263002
+121,Développement d'un jeu de puzzle pour mobile,28000,18,7,Bon,1,"Conception de niveaux, Mécaniques de jeu","Unity, C#",0.0
+122,Développement d'une application de gestion des stocks,28000,20,8,Bon,1,"Suivi des inventaires, Gestion des commandes","Java, Spring Boot, MySQL",0.0
+123,Création d'un site Web de vente en ligne de produits artisanaux,30000,25,10,Excellent,1,"Catalogue des produits, Panier d'achat","HTML, CSS, JavaScript, Vue.js, Node.js, MongoDB",0.3120367381071393
+124,Développement d'une application de suivi des dépenses personnelles,18000,12,5,Bon,1,"Enregistrement des transactions, Visualisation des données","React Native, Firebase",0.0
+125,Conception d'un système de gestion des tâches pour les équipes de développement,25000,18,7,Bon,1,"Création de tâches, Attribution des responsabilités","Python, Django, PostgreSQL",0.0
+126,Développement d'un jeu d'aventure en réalité virtuelle,40000,30,12,Excellent,1,"Monde interactif, Expérience immersive","Unity, C#",0.0
+127,Développement d'une application de gestion de rendez-vous médicaux,35000,22,9,Bon,1,"Gestion des rendez-vous, Système de rappel","Java, Spring Boot, PostgreSQL",0.0
+128,Création d'un site Web de réservation d'hôtels,28000,18,7,Excellent,1,"Sélection des chambres, Paiement en ligne sécurisé","HTML, CSS, JavaScript, PHP, MySQL",0.31097801883351983
+129,Développement d'une application mobile de recettes de cuisine,20000,14,6,Bon,1,"Exploration des recettes, Liste de courses","React Native, Firebase",0.0
+130,Conception d'un système de gestion des ressources humaines,30000,20,8,Excellent,1,"Gestion des employés, Suivi des congés","Python, Django, SQLite",0.0
+131,Développement d'un jeu de plateforme en 2D,25000,16,7,Bon,1,"Niveaux progressifs, Mécaniques de jeu variées","Unity, C#",0.0
+132,Développement d'une application de gestion de stocks,28000,16,6,Excellent,1,"Suivi des stocks, Gestion des fournisseurs","Java, Spring Boot, MongoDB",0.0
+133,Création d'un site Web de réservation de restaurants,25000,14,5,Bon,1,"Réservation de tables, Avis des utilisateurs","HTML, CSS, JavaScript, Node.js, MongoDB",0.35541395280583354
+134,Développement d'une application mobile de suivi des dépenses,20000,12,4,Bon,1,"Suivi des transactions, Génération de rapports","Flutter, SQLite",0.0
+135,Conception d'un système de gestion des documents,32000,18,8,Excellent,1,"Stockage sécurisé, Partage de documents","Python, Django, PostgreSQL",0.0
+136,Développement d'un jeu de quiz en ligne,18000,10,5,Bon,1,"Questions variées, Classements des joueurs","JavaScript, Express.js, MongoDB",0.0
+137,Développement d'une application de gestion de tâches,24000,14,7,Excellent,1,"Suivi des tâches, Attribution des responsabilités","React, Node.js, MongoDB",0.0
+138,Création d'un site Web de vente de produits artisanaux,30000,16,8,Bon,1,"Catalogue de produits, Paiement en ligne","HTML, CSS, JavaScript, Django, PostgreSQL",0.36787886964272754
+139,Développement d'une application de géolocalisation,28000,18,6,Excellent,1,"Localisation en temps réel, Itinéraires personnalisés","Swift, Firebase",0.0
+140,Conception d'un système de réservation de salles de réunion,22000,12,5,Bon,1,"Réservation de salles, Gestion des disponibilités","Vue.js, Node.js, MongoDB",0.0
+141,Développement d'un jeu mobile de quiz éducatif,20000,10,4,Bon,1,"Questions éducatives, Suivi des progrès des utilisateurs","Unity, C#",0.0
+142,Développement d'une application de suivi de fitness,26000,20,6,Excellent,1,"Suivi d'entraînement, Conseils de santé","Android, Kotlin, SQLite",0.0
+143,Création d'un site Web de réservation de voyages,32000,22,8,Bon,1,"Réservation de vols, Réservation d'hôtels","HTML, CSS, JavaScript, PHP, MySQL",0.37125221696007665
+144,Développement d'un logiciel de gestion des ressources humaines,38000,24,10,Excellent,1,"Gestion des employés, Suivi des congés","Java, Spring, Hibernate, PostgreSQL",0.0
+145,Conception d'une application de partage de photos,28000,18,7,Bon,1,"Téléchargement de photos, Filtrage des contenus","React Native, Firebase",0.0
+146,Développement d'un jeu vidéo en réalité virtuelle,35000,30,5,Excellent,1,"Expérience immersive, Interaction utilisateur","Unity, C#, Oculus Rift",0.0
+147,Développement d'une plateforme de streaming musical,30000,25,7,Excellent,1,"Streaming audio, Recommandations personnalisées","Python, Django, React.js, PostgreSQL",0.0
+148,Création d'une application de gestion de tâches,22000,15,5,Bon,1,"Suivi des tâches, Rappels","Angular, Firebase",0.0
+149,Développement d'un système de réservation de salles de réunion,26000,20,6,Excellent,1,"Réservation de salles, Calendrier","Node.js, Express, MongoDB",0.0
+150,Conception d'un logiciel de gestion des stocks,35000,28,8,Bon,1,"Suivi des stocks, Gestion des fournisseurs","Java, Spring Boot, MySQL",0.0
+151,Développement d'une application de planification de voyages,28000,18,7,Excellent,1,"Planification d'itinéraires, Réservation de billets","React Native, Firebase",0.0
+152,Développement d'une application de gestion des contacts,20000,10,4,Bon,1,"Gestion des contacts, Import/export","Python, Flask, SQLite",0.0
+153,Création d'un site web pour une agence de voyage,18000,12,6,Excellent,1,"Présentation des destinations, Réservation en ligne","HTML, CSS, JavaScript, PHP",0.36915494247117897
+154,Développement d'un système de paiement en ligne,25000,16,5,Excellent,1,"Intégration de passerelles de paiement, Sécurité","Ruby on Rails, Stripe",0.0
+155,Conception d'un système de suivi des dépenses,22000,14,5,Bon,1,"Suivi des dépenses, Rapports personnalisés","Java, Spring, MySQL",0.0
+156,Développement d'une application de gestion de projets,28000,18,7,Bon,1,"Gestion de tâches, Suivi du temps","React, Node.js, MongoDB",0.0
+157,Développement d'une application de gestion des stocks,30000,20,8,Excellent,1,"Gestion des stocks, Suivi des entrées et sorties","Python, Django, PostgreSQL",0.0
+158,Création d'un site web pour une entreprise de restauration,25000,16,6,Bon,1,"Affichage du menu, Réservation en ligne","HTML, CSS, JavaScript, PHP",0.3484238485666653
+159,Développement d'une application mobile pour la santé,35000,24,10,Excellent,1,"Suivi des symptômes, Rappels de médicaments","React Native, Firebase",0.0
+160,Conception d'un système de gestion des employés,28000,18,7,Excellent,1,"Gestion des congés, Évaluation des performances","Java, Spring, MySQL",0.0
+161,Développement d'une plateforme de réservation d'hôtel,40000,30,12,Excellent,1,"Réservation d'hôtel en ligne, Gestion des paiements","Vue.js, Node.js, MongoDB",0.0
+162,Développement d'une application de suivi des colis,30000,20,8,Excellent,1,"Suivi en temps réel des colis, Notifications","Python, Flask, MongoDB",0.0
+163,Création d'un site web pour une agence de voyage,25000,16,6,Bon,1,"Recherche de vols, Réservations d'hôtels","HTML, CSS, JavaScript, PHP",0.3737384847659935
+164,Développement d'une application de gestion des tâches,35000,24,10,Excellent,1,"Création de tâches, Attribution aux membres de l'équipe","React, Redux, Node.js, MongoDB",0.0
+165,Conception d'un système de gestion des ventes,28000,18,7,Excellent,1,"Suivi des ventes, Génération de rapports","Java, Spring Boot, PostgreSQL",0.0
+166,Développement d'une plateforme d'apprentissage en ligne,40000,30,12,Excellent,1,"Cours en ligne, Quiz, Certification","Vue.js, Django, MySQL",0.0
+167,Développement d'une application de gestion des stocks,30000,20,8,Excellent,1,Gestion des entrées et sorties de stock,"Python, Django, PostgreSQL",0.0
+168,Création d'un site web pour une galerie d'art,25000,16,6,Bon,1,"Affichage des œuvres d'art, Prise de rendez-vous","HTML, CSS, JavaScript, PHP",0.29643056357333186
+169,Développement d'une application de réservation de restaurants,35000,24,10,Excellent,1,"Réservation de tables, Gestion des menus","React, Node.js, MongoDB",0.0
+170,Conception d'un système de gestion des ressources humaines,28000,18,7,Excellent,1,"Gestion des employés, Suivi des congés","Java, Spring Boot, MySQL",0.0
+171,Développement d'une plateforme de streaming vidéo,40000,30,12,Excellent,1,"Diffusion de vidéos en direct, Archivage de contenu","Vue.js, Flask, MongoDB",0.0
+172,Application de gestion de tâches,20000,15,5,Bon,1,"Suivi des tâches, Gestion des priorités","Python, Flask, SQLite",0.0
+173,Plateforme de réservation de salles de réunion,18000,12,6,Bon,1,"Réservation en ligne, Calendrier des disponibilités","HTML, CSS, JavaScript, PHP, MySQL",0.3612243675842911
+174,Application de suivi des dépenses personnelles,22000,14,4,Bon,1,"Suivi des dépenses, Génération de rapports","React, Redux, Firebase",0.0
+175,Plateforme de gestion des stocks pour un magasin,25000,16,8,Excellent,1,"Gestion des produits, Suivi des niveaux de stock","Java, Spring Boot, PostgreSQL",0.0
+176,Application de gestion des rendez-vous médicaux,30000,20,7,Excellent,1,"Planification des rendez-vous, Rappels automatiques","Angular, Node.js, MongoDB",0.0
+177,Application de suivi de l'alimentation,15000,10,3,Bon,1,"Enregistrement des repas, Suivi de la consommation calorique","Android, Kotlin, Firebase",0.0
+178,Plateforme d'apprentissage en ligne,35000,24,10,Excellent,1,"Création de cours, Gestion des étudiants","Python, Django, PostgreSQL, React",0.0
+179,Application de gestion de la chaîne d'approvisionnement,28000,18,8,Bon,1,"Suivi des fournisseurs, Gestion des commandes","Java, Spring, MySQL",0.0
+180,Plateforme de réservation d'hôtels,40000,30,12,Excellent,1,"Réservation de chambres, Gestion des réservations","HTML, CSS, JavaScript, Python, Flask, MongoDB",0.38414079011030944
+181,Application de gestion des tâches pour les équipes,20000,14,6,Bon,1,"Attribution des tâches, Suivi des progrès","Vue.js, Node.js, MongoDB",0.0
+182,Application de gestion des finances personnelles,20000,15,5,Bon,1,"Suivi des dépenses, Génération de rapports financiers","React Native, Firebase",0.0
+183,Plateforme de streaming de musique,30000,20,8,Excellent,1,"Diffusion en continu, Création de playlists","Python, Django, PostgreSQL, React",0.0
+184,Application de gestion des stocks,25000,18,6,Bon,1,"Suivi des niveaux de stock, Gestion des commandes","Java, Spring, MySQL",0.0
+185,Application de planification de voyage,35000,25,10,Excellent,1,"Planification d'itinéraires, Réservation de vols et d'hôtels","HTML, CSS, JavaScript, Python, Flask, MongoDB",0.33681980889479524
+186,Application de gestion des projets,22000,16,7,Bon,1,"Gestion des tâches, Suivi des délais","Vue.js, Node.js, MongoDB",0.0
+187,Application de suivi de fitness,18000,12,5,Bon,1,"Suivi de l'activité physique, Génération de rapports de santé","React Native, Firebase",0.0
+188,Application de gestion de restaurant,28000,20,8,Excellent,1,"Gestion des réservations, Commandes en ligne","Python, Django, PostgreSQL, React",0.0
+189,Application de gestion des rendez-vous,22000,15,6,Bon,1,"Planification des rendez-vous, Notifications","Java, Spring, MySQL",0.0
+190,Application de vente en ligne,30000,22,10,Excellent,1,"Gestion des produits, Panier d'achat","HTML, CSS, JavaScript, Python, Flask, MongoDB",0.35766673061681614
+191,Application de suivi des projets scolaires,20000,18,7,Bon,1,"Gestion des devoirs, Suivi des notes","Vue.js, Node.js, MongoDB",0.0
+192,Application de gestion des stocks,25000,15,6,Bon,1,"Suivi des niveaux de stock, Génération de rapports de vente","Java, Spring, Hibernate, MySQL",0.0
+193,Application de réservation de billets,30000,18,8,Excellent,1,"Réservation de billets en ligne, Intégration de paiement","Python, Django, PostgreSQL, React",0.0
+194,Application de gestion des tâches,20000,12,5,Bon,1,"Création de tâches, Suivi du progrès","HTML, CSS, JavaScript, Vue.js, Node.js, MongoDB",0.36019221782437116
+195,Application de messagerie instantanée,35000,20,10,Excellent,1,"Messagerie en temps réel, Appels vocaux et vidéo","React Native, Firebase, WebRTC",0.0
+196,Application de réservation de restaurants,28000,16,7,Bon,1,"Réservation de tables, Gestion des avis","Vue.js, Node.js, MongoDB",0.0
+197,Plateforme d'apprentissage en ligne,40000,24,12,Excellent,1,"Cours en ligne, Quiz interactifs","HTML, CSS, JavaScript, Django, PostgreSQL",0.37445063314444105
+198,Application de gestion des employés,22000,14,7,Bon,1,"Gestion des heures de travail, Suivi des congés","React, Node.js, MongoDB",0.0
+199,Application de planification d'événements,30000,18,8,Excellent,1,"Planification d'événements, Gestion des invités","Vue.js, Firebase",0.0
+200,Application de suivi des dépenses,25000,16,6,Bon,1,"Suivi des dépenses personnelles, Génération de rapports","Python, Flask, SQLite",0.0
+201,Application de gestion des projets,35000,20,10,Excellent,1,"Gestion des tâches, Suivi du temps","React, Node.js, MongoDB",0.0
+202,d'Application de gestion des ventes,28000,15,8,Bon,1,"Gestion des stocks, Suivi des ventes","PHP, Laravel, MySQL",0.0
+203,d'Application de réservation de restaurants,32000,18,6,Excellent,1,"Réservation en ligne, Gestion des tables","React, Node.js, MongoDB",0.0
+204,d'Application de suivi des tâches,20000,12,5,Bon,1,"Liste de tâches, Rappels","Python, Django, PostgreSQL",0.0
+205,d'Application de gestion des rendez-vous,30000,16,7,Excellent,1,"Planification des rendez-vous, Notifications","Vue.js, Firebase",0.0
+206,d'Application de gestion des stocks,35000,20,10,Excellent,1,"Gestion des inventaires, Suivi des commandes","React, Node.js, MongoDB",0.0
+207,d'Application de gestion des tâches,25000,14,6,Bon,1,"Suivi des tâches, Gestion des priorités","Python, Flask, SQLite",0.0
+208,d'Application de suivi des dépenses,18000,10,4,Bon,1,"Suivi des transactions, Rapports financiers","HTML, CSS, JavaScript, Django",0.40165349799792704
+209,d'Application de gestion des projets,32000,18,8,Excellent,1,"Planification des projets, Suivi des ressources","React, Node.js, MongoDB",0.0
+210,d'Application de gestion des clients,30000,16,7,Excellent,1,"Gestion des contacts, Historique des interactions","Angular, ASP.NET, SQL Server",0.0
+211,d'Application de gestion des stocks,28000,15,6,Bon,1,"Inventaire en temps réel, Gestion des fournisseurs","Vue.js, Firebase",0.0
+212,d'Système de suivi des performances des employés,35000,20,10,Excellent,1,"Évaluation des performances, Suivi des objectifs","Python, Django, PostgreSQL",0.0
+213,d'Application de gestion des rendez-vous,22000,12,6,Bon,1,"Planification des rendez-vous, Notifications","React, Node.js, MongoDB",0.0
+214,d'Plateforme de réservation de billets en ligne,40000,24,8,Excellent,1,"Réservation de billets, Gestion des paiements","Angular, ASP.NET, SQL Server",0.0
+215,d'Application de gestion des documents,28000,16,7,Bon,1,"Gestion des fichiers, Partage de documents","Vue.js, Firebase",0.0
+216,d'Système de gestion des congés,25000,14,6,Excellent,1,"Demandes de congé, Suivi des jours de congé","HTML, CSS, JavaScript, Django",0.26357231804209813
+217,d'Plateforme d'apprentissage en ligne,30000,18,8,Excellent,1,"Cours en ligne, Quiz interactifs","React, Node.js, MongoDB",0.0
+218,d'Application de suivi des dépenses,20000,10,5,Bon,1,"Suivi des dépenses personnelles, Génération de rapports","Vue.js, Flask, SQLite",0.0
+219,d'Système de gestion des stocks,35000,22,10,Excellent,1,"Suivi des stocks, Gestion des fournisseurs","Angular, ASP.NET Core, MySQL",0.0
+220,d'Application de gestion de projet,28000,14,6,Bon,1,"Planification des tâches, Suivi du temps","HTML, CSS, JavaScript, Django",0.43721895975689706
+221,d'Plateforme de streaming de musique,40000,26,12,Excellent,1,"Streaming audio, Création de playlists","React Native, Firebase",0.0
+222,d'Système de réservation de billets en ligne,25000,16,7,Bon,1,"Réservation de billets, Gestion des réservations","React, Node.js, MongoDB",0.0
+223,d'Application de gestion des tâches,18000,12,5,Bon,1,"Création de tâches, Attribution des tâches","Vue.js, Flask, SQLite",0.0
+224,d'Plateforme de commerce électronique,35000,20,10,Excellent,1,"Vente en ligne, Gestion des commandes","Angular, ASP.NET Core, MySQL",0.0
+225,d'Application de gestion des ressources humaines,28000,14,6,Bon,1,"Gestion des employés, Suivi des congés","HTML, CSS, JavaScript, Django",0.44912630091993716
+226,d'Application de messagerie instantanée,30000,18,8,Excellent,1,"Communication en temps réel, Partage de fichiers","React Native, Firebase",0.0
+227,d'Application de suivi de fitness,20000,10,4,Bon,1,"Suivi de l'activité physique, Planification d'entraînement","Flutter, Firebase",0.0
+228,d'Système de gestion de stock,22000,15,6,Bon,1,"Suivi des stocks, Gestion des fournisseurs","ASP.NET, SQL Server",0.0
+229,d'Application de gestion de projet,28000,18,7,Bon,1,"Planification de projet, Suivi des tâches","Angular, Django, PostgreSQL",0.0
+230,d'Application de réservation de restaurants,25000,12,5,Bon,1,"Réservation de tables, Gestion des commandes","React, Node.js, MongoDB",0.0
+231,d'Plateforme de streaming de musique,35000,24,8,Excellent,1,"Diffusion de musique, Création de playlist","Vue.js, Django, PostgreSQL",0.0
+232,Application de gestion des tâches,18000,10,5,Excellent,1,"Gestion de tâches, Suivi de projet","Python, Django, SQLite",0.0
+233,Plateforme de location de voitures,30000,24,8,Bon,1,"Réservation de voitures, Gestion de flotte","React, Node.js, MongoDB",0.0
+234,Application de recettes de cuisine,20000,12,6,Bon,1,"Recherche de recettes, Liste d'achats","Angular, ASP.NET Core, MySQL",0.0
+235,Plateforme de location de logements,35000,30,10,Excellent,1,"Location de logements, Gestion d'annonces","Vue.js, Laravel, PostgreSQL",0.0
+236,Application de gestion financière,28000,18,7,Bon,1,"Suivi des dépenses, Planification financière","React Native, Flask, SQLite",0.0
+232,Application de gestion des tâches,18000,10,5,Excellent,1,"Gestion de tâches, Suivi de projet","Python, Django, SQLite",0.0
+233,Plateforme de location de voitures,30000,24,8,Bon,1,"Réservation de voitures, Gestion de flotte","React, Node.js, MongoDB",0.0
+234,Application de recettes de cuisine,20000,12,6,Bon,1,"Recherche de recettes, Liste d'achats","Angular, ASP.NET Core, MySQL",0.0
+235,Plateforme de location de logements,35000,30,10,Excellent,1,"Location de logements, Gestion d'annonces","Vue.js, Laravel, PostgreSQL",0.0
+236,Application de gestion financière,28000,18,7,Bon,1,"Suivi des dépenses, Planification financière","React Native, Flask, SQLite",0.0
+246,Plateforme de streaming de musique,35000,24,10,Excellent,1,"Streaming de musique en direct, Création de listes de lecture personnalisées","React, Node.js, MongoDB",0.0
+247,Application de gestion de tâches collaboratives,28000,20,8,Bon,1,"Assignation de tâches, Suivi de l'état de progression","Vue.js, Django, PostgreSQL",0.0
+248,Application de notation des restaurants,20000,15,6,Bon,1,"Notation et commentaires des restaurants, Recherche de restaurants à proximité","Angular, Flask, MySQL",0.0
+249,Plateforme de location de voitures en ligne,30000,18,7,Excellent,1,"Location de voitures en libre-service, Réservation en ligne","React Native, Laravel, SQLite",0.0
+250,Application de suivi des habitudes de sommeil,22000,12,5,Bon,1,"Suivi des habitudes de sommeil, Analyse des cycles de sommeil","React, Express, MongoDB",0.0
+251,Application de recommandation de livres,25000,14,6,Bon,1,Recommandation de livres en fonction des préférences de l'utilisateur,"Python, Flask, PostgreSQL",0.0
+252,Application de suivi des dépenses personnelles,18000,10,5,Bon,1,"Suivi des dépenses quotidiennes, Génération de rapports","React Native, Node.js, MongoDB",0.0
+253,Plateforme de coaching en ligne,30000,20,8,Excellent,1,"Coaching personnalisé, Suivi des progrès","Vue.js, Django, PostgreSQL",0.0
+254,Application de planification de voyage,22000,16,7,Bon,1,"Planification de voyages, Gestion des itinéraires","React, Express, MongoDB",0.0
+255,Application de gestion des stocks pour petits commerçants,20000,12,6,Bon,1,"Gestion des stocks, Suivi des ventes","Angular, Django, SQLite",0.0
+256,Plateforme d'apprentissage en ligne de langues étrangères,35000,18,10,Excellent,1,"Cours de langues interactifs, Suivi des progrès","React, Django, PostgreSQL",0.0
+257,Application de fitness et de suivi de la santé,28000,16,8,Bon,1,"Suivi de l'exercice, Suivi des calories et du sommeil","Flutter, Firebase",0.0
+258,Plateforme de commerce électronique de produits locaux,40000,22,12,Excellent,1,"Achat de produits locaux, Suivi des commandes","Vue.js, Laravel, MySQL",0.0
+259,Application de planification financière personnelle,30000,20,10,Bon,1,"Budgeting, Gestion des investissements","Angular, Flask, MongoDB",0.0
+260,Application de réservation de salles de réunion,20000,14,6,Bon,1,"Réservation de salles, Gestion des disponibilités","React Native, Node.js, SQLite",0.0
+261,Application de gestion de tâches personnelles,25000,14,8,Bon,1,"Gestion de listes de tâches, Notifications","React, Node.js, MongoDB",0.0
+262,Plateforme de streaming de musique indépendante,35000,20,12,Excellent,1,"Diffusion de musique indépendante, Partage de playlists","Vue.js, Django, PostgreSQL",0.0
+263,Application de partage de recettes de cuisine,20000,12,6,Bon,1,"Partage de recettes, Recherche par ingrédient","Angular, Flask, SQLite",0.0
+264,Application de covoiturage pour les trajets domicile-travail,30000,18,10,Bon,1,"Planification de trajets, Partage de frais","React Native, Express, MongoDB",0.0
+265,Application de découverte de randonnées pédestres,18000,10,6,Bon,1,"Découverte de sentiers de randonnée, Cartes interactives","Flutter, Flask, SQLite",0.0
+266,Application de suivi de la santé mentale,28000,16,7,Bon,1,"Suivi quotidien de l'humeur, Outils de gestion du stress","React Native, Node.js, MongoDB",0.0
+267,Application de gestion des dépenses personnelles,22000,12,5,Bon,1,"Suivi des dépenses, Analyse des habitudes de consommation","Vue.js, Flask, SQLite",0.0
+268,Application de planification d'événements,32000,18,9,Excellent,1,"Gestion des invités, Planification de l'itinéraire","Angular, Django, PostgreSQL",0.0
+269,Application de journal intime numérique,19000,10,4,Bon,1,"Journalisation quotidienne, Confidentialité des données","Flutter, Express, MongoDB",0.0
+270,Plateforme de coaching sportif en ligne,35000,20,12,Excellent,1,"Plans d'entraînement personnalisés, Suivi de la progression","React, Flask, MySQL",0.0
+271,Plateforme de réservation de cours en ligne,28000,16,7,Bon,1,"Réservation de cours en ligne, Suivi de la progression des étudiants","React, Django, PostgreSQL",0.0
+272,Application de suivi des objectifs personnels,22000,12,5,Bon,1,"Définition et suivi des objectifs personnels, Notification de rappels","Vue.js, Express, MongoDB",0.0
+273,Application de gestion de tâches collaboratives,32000,18,9,Excellent,1,"Assignation de tâches, Suivi des progrès, Communication en temps réel","Angular, Flask, MySQL",0.0
+274,Plateforme de cours en ligne interactifs,19000,10,4,Bon,1,"Cours interactifs, Forum de discussion","Flutter, Django, SQLite",0.0
+275,Application de suivi de la consommation d'eau,35000,20,12,Excellent,1,"Suivi quotidien de la consommation d'eau, Notification de rappels","React Native, Node.js, MongoDB",0.0
+276,Plateforme de réservation de salles de sport,30000,14,8,Bon,1,"Réservation de créneaux horaires, Gestion des abonnements","Angular, Spring Boot, MongoDB",0.0
+277,Application de suivi de la nutrition,25000,10,6,Bon,1,"Suivi quotidien de l'apport nutritionnel, Recettes personnalisées","React, Flask, MySQL",0.0
+278,Application de gestion de finances personnelles,35000,16,7,Excellent,1,"Gestion des dépenses et des revenus, Suivi des budgets","Vue.js, Django, PostgreSQL",0.0
+279,Plateforme de streaming de concerts en ligne,40000,18,10,Excellent,1,"Diffusion de concerts en direct, Archives de concerts passés","React Native, Node.js, MongoDB",0.0
+280,Application de planification de voyages,28000,12,5,Bon,1,"Planification d'itinéraires, Réservation de billets et d'hébergements","Flutter, Express, SQLite",0.0
+281,Plateforme d'échange de livres en ligne,20000,8,5,Bon,1,"Échange de livres usagés, Suivi des transactions","React, Node.js, MongoDB",0.0
+282,Application de fitness personnalisée,30000,10,6,Excellent,1,"Plans d'entraînement personnalisés, Suivi de la condition physique","Flutter, Flask, PostgreSQL",0.0
+283,Application de gestion des tâches,15000,6,4,Bon,1,"Création de tâches, Gestion des priorités","Vue.js, Django, SQLite",0.0
+284,Plateforme de mentorat en ligne,25000,12,8,Bon,1,"Mentorat personnalisé, Soutien communautaire","Angular, Spring Boot, MySQL",0.0
+285,Application de location de vélos électriques,18000,8,5,Bon,1,"Location de vélos électriques, Suivi des emplacements","React Native, Django, PostgreSQL",0.0
+286,Plateforme de réservation de salles de réunion,22000,9,7,Bon,1,"Réservation de salles, Gestion des disponibilités","React, Node.js, MongoDB",0.0
+287,Application de gestion des finances personnelles,28000,11,6,Excellent,1,"Suivi des dépenses, Budgetisation","Flutter, Django, PostgreSQL",0.0
+288,Application de recettes de cuisine personnalisées,18000,7,4,Bon,1,"Recettes personnalisées, Gestion des ingrédients","Vue.js, Flask, SQLite",0.0
+289,Plateforme de recrutement spécialisée dans la technologie,30000,13,9,Bon,1,"Recrutement de talents technologiques, Évaluation des compétences","Angular, Spring Boot, MySQL",0.0
+290,Application de suivi des habitudes de sommeil,15000,6,5,Bon,1,"Suivi des habitudes de sommeil, Statistiques de sommeil","React Native, Django, PostgreSQL",0.0
+291,Application de gestion de projets de construction,35000,18,8,Excellent,1,"Planification de projets, Gestion des ressources","React, Node.js, MongoDB",0.0
+292,Plateforme de réservation de voyages personnalisés,40000,20,10,Excellent,1,"Réservation de voyages sur mesure, Gestion des itinéraires","Vue.js, Django, PostgreSQL",0.0
+293,Application de suivi des performances sportives,25000,12,6,Bon,1,"Suivi des performances, Entraînements personnalisés","Flutter, Flask, SQLite",0.0
+294,Plateforme d'analyse de données environnementales,30000,15,7,Bon,1,"Analyse des données environnementales, Visualisation des données","Angular, Spring Boot, MySQL",0.0
+295,Application de gestion de tâches collaboratives,20000,10,5,Bon,1,"Gestion des tâches, Collaboration en équipe","React Native, Express.js, MongoDB",0.0
+297,Application de gestion de bibliothèque en ligne,28000,14,6,Bon,1,"Gestion des emprunts, Catalogue en ligne","React, Django, PostgreSQL",0.0
+298,Plateforme de suivi de la santé mentale,32000,16,8,Excellent,1,"Suivi des humeurs, Ressources de bien-être","Vue.js, Flask, MongoDB",0.0
+299,Application de gestion de salles de sport,30000,15,7,Bon,1,"Gestion des adhérents, Planification des séances","Angular, ASP.NET, SQL Server",0.0
+300,Plateforme de covoiturage urbain,35000,18,9,Excellent,1,"Partage de trajets, Gestion des paiements","React Native, Node.js, MongoDB",0.0
+301,Application de recettes de cuisine personnalisées,25000,12,5,Bon,1,"Suggestions de recettes, Listes de courses","Flutter, Firebase, SQLite",0.0
