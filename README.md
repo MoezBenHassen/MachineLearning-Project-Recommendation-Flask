@@ -1,3 +1,13 @@
+## Installing dependencies :
+To install the dependencies listed in a `requirements.txt` file for your Python project, follow these steps:
+
+**Install Dependencies**: Use `pip` (Python's package installer) to install the dependencies listed in `requirements.txt`:
+   ```bash
+   pip install -r requirements.txt --user
+   ```
+This command reads the `requirements.txt` file and installs all the Python packages specified in it along with their specified versions.
+
+
 ## Run project:
 ```bash
 python run.py
